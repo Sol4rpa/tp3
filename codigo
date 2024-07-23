@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+{
+    int i;
+    char cadena[200];
+ printf("Ingrese un parrafo separando oraciones por puntos \n");
+ gets(cadena);
+ while(cadena[i]!='\0')
+ {
+     if(i==0)
+        {
+         if (cadena [i]>='a'&&cadena [i]<='z')
+        {
+        cadena[i]=cadena[i]-32;
+        }
+
+     }
+
+     if(cadena[i]=='.')
+     {
+     i++;
+        if (cadena [i]>='a'&&cadena [i]<='z')
+        {
+        cadena[i]=cadena[i]-32;
+        }
+          else
+        i++;
+
+
+     }
+        else
+        i++;
+
+
+
+ }
+
+ printf("La cadena resultante es \n %s",cadena);
+
+}
